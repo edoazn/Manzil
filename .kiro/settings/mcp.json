@@ -1,0 +1,11 @@
+{
+    "mcpServers": {
+        "laravel-boost": {
+            "command": "php",
+            "args": [
+                "d:/applications/Laravel projects/manzil/artisan",
+                "boost:mcp"
+            ]
+        }
+    }
+}

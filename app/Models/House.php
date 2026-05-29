@@ -44,7 +44,8 @@ class House extends Model
 
     public function facilities()
     {
-        return $this->hasMany(HouseFacility::class);
+        return $this->belongsToMany(Facility::class, 'house_facilities', 'house_id', 'facility_id')
+            ->withTimestamps();
     }
     public function mortgateRequest(){
 

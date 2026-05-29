@@ -13,17 +13,16 @@ class BankForm
     {
         return $schema
             ->components([
-                 Fieldset::make('Details')
-                ->schema([
-                    TextInput::make('name')
-                    ->maxLength(255)
-                    ->required(),
+                Fieldset::make('Details')
+                    ->schema([
+                        TextInput::make('name')
+                            ->maxLength(255)
+                            ->required(),
 
-
-                    FileUpload::make('photo')
-                    ->required()
-                    ->image(),
-                ])
+                        FileUpload::make('photo')
+                            ->required()
+                            ->image(),
+                    ]),
             ]);
     }
 }
