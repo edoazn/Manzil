@@ -7,6 +7,8 @@ use Filament\Actions\DeleteBulkAction;
 use Filament\Actions\EditAction;
 use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\TextColumn;
 use Filament\Tables\Filters\TrashedFilter;
 use Filament\Tables\Table;
 
@@ -16,7 +18,12 @@ class InterestsTable
     {
         return $table
             ->columns([
-                //
+                ImageColumn::make('house.thumbnail'),
+                TextColumn::make('house.name')
+                    ->searchable(),
+                TextColumn::make('bank.name'),
+                TextColumn::make('interest'),
+                TextColumn::make('duration'),
             ])
             ->filters([
                 TrashedFilter::make(),

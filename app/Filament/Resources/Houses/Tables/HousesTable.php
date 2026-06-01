@@ -25,6 +25,7 @@ class HousesTable
                 TextColumn::make('city.name'),
 
             ])
+            ->defaultSort('created_at','desc')
             ->filters([
                 TrashedFilter::make(),
             ])

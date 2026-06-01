@@ -2,7 +2,6 @@
 
 namespace App\Filament\Resources\Houses\Schemas;
 
-use App\Models\Facility;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
@@ -81,7 +80,7 @@ class HouseForm
 
                 Section::make('Additional')
                     ->description('Detail tambahan tentang rumah')
-                    ->columns(2)
+                    ->columnSpanFull()
                     ->schema([
                         Textarea::make('about')
                             ->label('Tentang')
